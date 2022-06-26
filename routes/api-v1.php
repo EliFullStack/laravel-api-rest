@@ -2,6 +2,7 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Api\v1\RegisterController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,6 +19,8 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });*/
 
-Route::get('/', function () {
+/*Route::get('/', function () {
     return "probando apirest"; 
-});
+});*/
+
+Route::post('register', [RegisterController::class, 'store'])->name('api.v1.register');
