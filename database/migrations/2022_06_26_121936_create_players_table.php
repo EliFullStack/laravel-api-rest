@@ -18,7 +18,9 @@ class CreatePlayersTable extends Migration
             $table->string('name')->default('Anonymous');
             $table->integer('throws');
             $table->integer('success_rate');
-            $table->unsignedBigInteger('user_id');
+
+            $table->unsignedBigInteger('user_id')->unique();
+            
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
 
             $table->timestamps();
