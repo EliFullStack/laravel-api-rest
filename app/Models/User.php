@@ -47,4 +47,9 @@ class User extends Authenticatable
     public function player() {
         return $this->hasOne('App\Models\Player');
     }
+
+    //Relación muchos a muchos
+    public function roles() {
+        return $this->belongsToMany('App\Models\Role');
+    }
 }
