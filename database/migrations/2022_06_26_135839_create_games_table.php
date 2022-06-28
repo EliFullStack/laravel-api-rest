@@ -17,7 +17,6 @@ class CreateGamesTable extends Migration
             $table->id();
             $table->integer('dice1');
             $table->integer('dice2');
-            $table->integer('sum');
             $table->unsignedBigInteger('player_id');
             $table->foreign('player_id')->references('id')->on('players')->onDelete('cascade');
 
