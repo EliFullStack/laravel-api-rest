@@ -20,7 +20,6 @@ class PlayerFactory extends Factory
         return [
             'name' => $name,
             'throws' => $this->faker->numberBetween(1, 100),
-           // 'user_id' => User::all()->random()->id
             'user_id' => $user_id
         ];
     }
