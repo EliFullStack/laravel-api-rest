@@ -17,6 +17,7 @@ class CreateGamesTable extends Migration
             $table->id();
             $table->integer('dice1');
             $table->integer('dice2');
+           
             $table->unsignedBigInteger('player_id');
             $table->foreign('player_id')->references('id')->on('players')->onDelete('cascade');
 
@@ -34,3 +35,4 @@ class CreateGamesTable extends Migration
         Schema::dropIfExists('games');
     }
 }
+
