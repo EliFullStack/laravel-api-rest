@@ -15,7 +15,8 @@ class PlayerController extends Controller
      */
     public function index()
     {
-        //
+        $players = Player::all();
+        return $players;
     }
 
     /**
@@ -26,7 +27,9 @@ class PlayerController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            
+        ]);
     }
 
     /**
@@ -52,6 +55,7 @@ class PlayerController extends Controller
         //
     }
 
+
     /**
      * Remove the specified resource from storage.
      *
@@ -61,5 +65,27 @@ class PlayerController extends Controller
     public function destroy(Player $player)
     {
         //
+    }
+
+    public function throw()
+    {
+
+    }
+
+    public function playerThrow()
+    {
+
+    }
+
+    public function getRanking() {
+
+    }
+
+    public function getWinner() {
+
+    }
+
+    public function getLoser() {
+
     }
 }
