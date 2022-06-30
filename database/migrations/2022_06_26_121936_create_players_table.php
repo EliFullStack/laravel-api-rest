@@ -16,7 +16,7 @@ class CreatePlayersTable extends Migration
         Schema::create('players', function (Blueprint $table) {
             $table->id();
             $table->integer('throws');
-            $table->integer('success_rate');
+           
 
             $table->unsignedBigInteger('user_id')->unique();
             

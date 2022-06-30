@@ -11,6 +11,6 @@ class Game extends Model
 
     //Relación uno a muchos inversa
     public function player() {
-        $this->belongsTo(Player::class);
+        return $this->belongsTo(Player::class);
     }
 }
