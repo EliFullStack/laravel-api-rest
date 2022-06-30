@@ -15,7 +15,6 @@ class CreatePlayersTable extends Migration
     {
         Schema::create('players', function (Blueprint $table) {
             $table->id();
-            $table->string('name')->default('Anonymous');
             $table->integer('throws');
            
 
